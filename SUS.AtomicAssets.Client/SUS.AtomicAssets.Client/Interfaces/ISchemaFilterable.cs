@@ -1,6 +1,6 @@
 ﻿namespace SUS.AtomicAssets.Client.Interfaces
 {
-    public interface ILimitable<Type> : IQueryable
+    public interface ISchemaFilterable<Type> : IQueryable
     {
     }
 }

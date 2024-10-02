@@ -1,6 +1,6 @@
 ﻿namespace SUS.AtomicAssets.Client.Interfaces
 {
-    public interface ISchemable<Type> : IQueryable
+    public interface IOwnerFilterable<Type>: IQueryable
     {
     }
 }

@@ -8,8 +8,8 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
         IOrderable<AllAccounts>,
         ILimitable<AllAccounts>,
         IPageable<AllAccounts>,
-        ICollectionable<AllAccounts>,
-        ISchemable<AllAccounts>,
+        ICollectionFilterable<AllAccounts>,
+        ISchemaFilterable<AllAccounts>,
         IExecutable<AccountsResponse>
     {
         internal AllAccounts(string endpoint)

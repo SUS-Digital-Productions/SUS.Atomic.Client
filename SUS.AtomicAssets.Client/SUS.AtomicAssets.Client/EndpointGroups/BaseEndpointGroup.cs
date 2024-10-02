@@ -7,6 +7,13 @@ namespace SUS.AtomicAssets.Client.EndpointGroups
     {
         protected string _endpoint;
         protected Dictionary<string, string> queryPairs = new Dictionary<string, string>();
+
+        public void AddMultiArgQuery(string name, List<string> values)
+        {
+            string value = string.Join(",", values);
+            AddQuery(name, value);
+        }
+
         public void AddQuery(string name, string value)
         {
             queryPairs.Add(name, value);
