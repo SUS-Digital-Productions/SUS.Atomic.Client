@@ -162,4 +162,13 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
+    public static class BurnedByAccountFilterableMethods
+    {
+        public static Type BurnedByAccount<Type>(this IBurnedByAccountFilterable<Type> burnedByAccountFilterable, List<string> accounts)
+        {
+            burnedByAccountFilterable.AddMultiArgQuery("burned_by_account", accounts);
+            return (Type)burnedByAccountFilterable;
+        }
+    }
+
 }

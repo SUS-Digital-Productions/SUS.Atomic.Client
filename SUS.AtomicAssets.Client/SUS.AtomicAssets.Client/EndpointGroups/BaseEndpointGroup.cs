@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 namespace SUS.AtomicAssets.Client.EndpointGroups
 {
-    public class BaseEndpointGroup : IQueryable
+    public abstract class BaseEndpointGroup : IQueryable
     {
         protected string _endpoint;
         protected Dictionary<string, string> queryPairs = new Dictionary<string, string>();

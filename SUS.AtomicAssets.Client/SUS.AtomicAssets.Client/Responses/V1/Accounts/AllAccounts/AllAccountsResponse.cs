@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-namespace SUS.AtomicAssets.Client.Responses.V1.Accounts
+namespace SUS.AtomicAssets.Client.Responses.V1.Accounts.AllAccounts
 {
-    public class AccountsResponse
+    public class AllAccountsResponse
     {
         [JsonProperty("success")]
         public bool Success { get; set; }

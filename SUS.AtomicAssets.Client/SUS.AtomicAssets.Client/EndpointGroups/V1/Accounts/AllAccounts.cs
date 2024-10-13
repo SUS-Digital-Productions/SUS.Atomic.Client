@@ -1,5 +1,5 @@
 ﻿using SUS.AtomicAssets.Client.Interfaces;
-using SUS.AtomicAssets.Client.Responses.V1.Accounts;
+using SUS.AtomicAssets.Client.Responses.V1.Accounts.AllAccounts;
 namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
 {
     public class AllAccounts
@@ -20,7 +20,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
         IPageable<AllAccounts>,
         ILimitable<AllAccounts>,
         IOrderable<AllAccounts>,
-        IExecutable<AccountsResponse>
+        IExecutable<AllAccountsResponse>
     {
         internal AllAccounts(string endpoint)
         {

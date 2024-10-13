@@ -1,7 +1,13 @@
 ﻿using SUS.AtomicAssets.Client.Interfaces;
+using SUS.AtomicAssets.Client.Responses.V1.Accounts.SingleAccount;
 namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
 {
-    public class SingleAccount : BaseEndpointGroup, IOrderable<SingleAccount>
+    public class SingleAccount :
+        BaseEndpointGroup,
+        IAssetOfferFilterable<SingleAccount>,
+        ICollectionBlocklistable<SingleAccount>,
+        ICollectionAllowlistable<SingleAccount>,
+        IExecutable<SingleAccountResponse>
     {
         internal SingleAccount(string endpoint, string account)
         {

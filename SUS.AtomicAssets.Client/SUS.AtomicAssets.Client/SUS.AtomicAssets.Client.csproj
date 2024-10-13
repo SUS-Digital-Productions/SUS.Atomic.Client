@@ -4,7 +4,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="EndpointGroups\V1\Assets\" />
+    <Folder Include="EndpointGroups\V1\Collections\" />
     <Folder Include="EndpointGroups\V2\" />
+    <Folder Include="Responses\V1\Assets\" />
+    <Folder Include="Responses\V1\Collections\" />
+    <Folder Include="Responses\V1\Schemas\" />
     <Folder Include="Responses\V2\" />
   </ItemGroup>
   <ItemGroup>

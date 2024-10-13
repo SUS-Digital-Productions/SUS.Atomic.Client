@@ -6,7 +6,6 @@ namespace SUS.AtomicAssets.Client.Interfaces
     {
         void AddQuery(string name, string value);
         string GetURI();
-
         void AddMultiArgQuery(string name, List<string> values);
     }
 }
