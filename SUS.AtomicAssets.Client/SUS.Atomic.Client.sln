@@ -4,7 +4,11 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUS.AtomicAssets.Client", "SUS.AtomicAssets.Client\SUS.AtomicAssets.Client.csproj", "{8410B09E-3428-4235-8DF9-C0FB1AF9EA19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{07C10291-89E4-4347-88A8-29A38117CB25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{07C10291-89E4-4347-88A8-29A38117CB25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUS.AtomicMarket.Client", "SUS.AtomicMarket.Client\SUS.AtomicMarket.Client.csproj", "{001B3D31-9951-468A-ADB7-073156AF6A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUS.AtomicTools.Client", "SUS.AtomicTools.Client\SUS.AtomicTools.Client.csproj", "{C15BC783-2ACD-4E54-9E6F-204702BDBB53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,14 @@ Global
 		{07C10291-89E4-4347-88A8-29A38117CB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07C10291-89E4-4347-88A8-29A38117CB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07C10291-89E4-4347-88A8-29A38117CB25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001B3D31-9951-468A-ADB7-073156AF6A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001B3D31-9951-468A-ADB7-073156AF6A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001B3D31-9951-468A-ADB7-073156AF6A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001B3D31-9951-468A-ADB7-073156AF6A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15BC783-2ACD-4E54-9E6F-204702BDBB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15BC783-2ACD-4E54-9E6F-204702BDBB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15BC783-2ACD-4E54-9E6F-204702BDBB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15BC783-2ACD-4E54-9E6F-204702BDBB53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
