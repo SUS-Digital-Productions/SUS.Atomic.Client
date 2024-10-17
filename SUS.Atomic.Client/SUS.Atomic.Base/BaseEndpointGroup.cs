@@ -1,7 +1,7 @@
 ﻿using SUS.Atomic.Base.Interfaces;
 using System;
 using System.Collections.Generic;
-namespace SUS.AtomicAssets.Client.EndpointGroups
+namespace SUS.Atomic.Base
 {
     public abstract class BaseEndpointGroup : IQueryable
     {
