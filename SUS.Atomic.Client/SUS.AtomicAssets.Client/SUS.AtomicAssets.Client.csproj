@@ -8,12 +8,13 @@
     <Folder Include="EndpointGroups\V1\Collections\" />
     <Folder Include="Responses\V1\Assets\" />
     <Folder Include="Responses\V1\Collections\" />
-    <Folder Include="Responses\V1\Schemas\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SUS.Atomic.Base\SUS.Atomic.Base.csproj" />
   </ItemGroup>
 </Project>

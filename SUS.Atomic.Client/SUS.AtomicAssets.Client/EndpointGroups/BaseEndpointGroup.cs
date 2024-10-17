@@ -1,4 +1,4 @@
-﻿using SUS.AtomicAssets.Client.Interfaces;
+﻿using SUS.Atomic.Base.Interfaces;
 using System;
 using System.Collections.Generic;
 namespace SUS.AtomicAssets.Client.EndpointGroups

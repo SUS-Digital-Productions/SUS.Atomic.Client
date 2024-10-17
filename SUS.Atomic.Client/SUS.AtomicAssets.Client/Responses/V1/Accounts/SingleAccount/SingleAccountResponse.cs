@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using SUS.AtomicAssets.Client.Responses.V1.Generic;
+using SUS.Atomic.Base.Responses.Generic;
 using System.Collections.Generic;
 
 namespace SUS.AtomicAssets.Client.Responses.V1.Accounts.SingleAccount

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SUS.Atomic.Base\SUS.Atomic.Base.csproj" />
     <ProjectReference Include="..\SUS.AtomicAssets.Client\SUS.AtomicAssets.Client.csproj" />
   </ItemGroup>
 </Project>

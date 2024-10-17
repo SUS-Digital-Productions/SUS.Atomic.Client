@@ -1,7 +1,5 @@
-﻿using SUS.AtomicAssets.Client.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SUS.Atomic.Base.Interfaces;
+using SUS.AtomicAssets.Client.Responses.V1.Burns.AllBurns;
 
 namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
 {
@@ -22,7 +20,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
         IPageable<AllBurns>,
         ILimitable<AllBurns>,
         IOrderable<AllBurns>,
-        IExecutable<AllBurns>
+        IExecutable<AllBurnsResponse>
     {
         internal AllBurns(string endpoint)
         {

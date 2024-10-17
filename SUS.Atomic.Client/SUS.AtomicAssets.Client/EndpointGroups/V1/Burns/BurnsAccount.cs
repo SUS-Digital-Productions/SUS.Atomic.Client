@@ -1,4 +1,5 @@
-﻿using SUS.AtomicAssets.Client.Interfaces;
+﻿using SUS.Atomic.Base.Interfaces;
+using SUS.AtomicAssets.Client.Responses.V1.Burns.BurnsAccount;
 
 namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
 {
@@ -8,7 +9,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
         IAssetOfferFilterable<BurnsAccount>,
         ICollectionBlocklistable<BurnsAccount>,
         ICollectionAllowlistable<BurnsAccount>,
-        IExecutable<BurnsAccount>
+        IExecutable<BurnsAccountResponse>
     {
         internal BurnsAccount(string endpoint, string account)
         {
