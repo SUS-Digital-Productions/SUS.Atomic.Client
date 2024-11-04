@@ -31,7 +31,5 @@ namespace SUS.Atomic.Base.Responses.Generic
 
         [JsonProperty("created_at_time")]
         public long CreatedAtTime { get; set; }
-
-
     }
 }

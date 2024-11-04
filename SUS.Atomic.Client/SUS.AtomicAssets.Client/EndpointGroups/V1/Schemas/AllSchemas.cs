@@ -8,12 +8,12 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
         :
         BaseEndpointGroup,
         ICollectionFilterable<AllSchemas>,
-        IAuthorizedAccountsFilterable<AllSchemas>,
+        IAuthorizedAccountFilterable<AllSchemas>,
         ISchemaFilterable<AllSchemas>,
         IMatchable<AllSchemas>,
         ICollectionBlocklistable<AllSchemas>,
         ICollectionAllowlistable<AllSchemas>,
-        IIdFilterable<AllSchemas>,
+        IIdsFilterable<AllSchemas>,
         ILowerBoundable<AllSchemas>,
         IUpperBoundable<AllSchemas>,
         IBeforeFilterable<AllSchemas>,
@@ -21,7 +21,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
         IPageable<AllSchemas>,
         ILimitable<AllSchemas>,
         IOrderable<AllSchemas>,
-        ISortable<AllSchemas>,
+        ISortable<AllSchemas, AllSchemasSortTypes>,
         IExecutable<AllSchemasResponse>
     {
         internal AllSchemas(string endpoint)

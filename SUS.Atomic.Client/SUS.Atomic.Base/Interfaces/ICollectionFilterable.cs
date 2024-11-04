@@ -2,5 +2,6 @@
 {
     public interface ICollectionFilterable<Type> : IQueryable
     {
+
     }
 }

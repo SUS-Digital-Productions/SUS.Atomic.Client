@@ -1,6 +1,6 @@
 ﻿namespace SUS.Atomic.Base.Interfaces
 {
-    public interface ISortable<Type> : IQueryable
+    public interface ISortable<Type, Enum> : IQueryable
     {
 
     }

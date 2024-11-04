@@ -2,7 +2,7 @@
 {
     public class Burns
     {
-        private string _endpoint;
+        private readonly string _endpoint;
 
         internal Burns(string endpoint)
         {

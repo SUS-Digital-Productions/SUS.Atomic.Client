@@ -15,7 +15,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
         ICollectionBlocklistable<AllBurns>,
         ICollectionAllowlistable<AllBurns>,
         IBurnedByAccountFilterable<AllBurns>,
-        IIdFilterable<AllBurns>,
+        IIdsFilterable<AllBurns>,
         ILowerBoundable<AllBurns>,
         IUpperBoundable<AllBurns>,
         IPageable<AllBurns>,
