@@ -2,7 +2,7 @@
 
 namespace SUS.Atomic.Base.Responses.Generic
 {
-    public class AtomicPrices
+    public class AtomicPrice
     {
         [JsonProperty("average")]
         public string Average { get; set; }

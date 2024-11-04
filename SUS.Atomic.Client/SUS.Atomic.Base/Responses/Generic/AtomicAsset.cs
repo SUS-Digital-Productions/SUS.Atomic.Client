@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
-using SUS.Atomic.Base.Responses.Generic;
 using System.Collections.Generic;
 
-namespace SUS.AtomicAssets.Client.Responses.V1.Assets
+namespace SUS.Atomic.Base.Responses.Generic
 {
-    public class GenericSingleAsset<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+    public class AtomicAsset<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
     {
         [JsonProperty("contract")]
         public string Contract { get; set; }
@@ -46,7 +45,7 @@ namespace SUS.AtomicAssets.Client.Responses.V1.Assets
         public AssetMutableData MutableData { get; set; }
 
         [JsonProperty("data")]
-        public CombinedData AssetData { get; set; }
+        public CombinedData Data { get; set; }
 
         [JsonProperty("burned_by_account")]
         public string BurnedByAccount { get; set; }
@@ -74,5 +73,6 @@ namespace SUS.AtomicAssets.Client.Responses.V1.Assets
 
         [JsonProperty("minted_at_time")]
         public string MintedAtTime { get; set; }
+
     }
 }

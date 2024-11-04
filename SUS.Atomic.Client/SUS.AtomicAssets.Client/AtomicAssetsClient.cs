@@ -4,6 +4,7 @@ using SUS.AtomicAssets.Client.EndpointGroups.V1.Burns;
 using SUS.AtomicAssets.Client.EndpointGroups.V1.Collections;
 using SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas;
 using SUS.AtomicAssets.Client.EndpointGroups.V1.Templates;
+using SUS.AtomicAssets.Client.EndpointGroups.V1.Transfers;
 
 namespace SUS.AtomicAssets.Client
 {
@@ -13,12 +14,10 @@ namespace SUS.AtomicAssets.Client
         public Accounts Accounts { get; }
         public Schemas Schemas { get; }
         public Burns Burns { get; }
-
         public Templates<TemplateImmutableData> Templates { get; }
-
         public Assets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Assets { get; }
-
         public Collections<CollectionData> Collections { get; }
+        public Transfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Transfers { get; }
 
         public AtomicAssetsClient(string endpoint)
         {
@@ -29,6 +28,7 @@ namespace SUS.AtomicAssets.Client
             Assets = new Assets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
             Collections = new Collections<CollectionData>(_endpoint);
             Templates = new Templates<TemplateImmutableData>(_endpoint);
+            Transfers = new Transfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
         }
     }
 }

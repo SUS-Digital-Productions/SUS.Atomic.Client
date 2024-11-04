@@ -17,5 +17,10 @@
         {
             return new SingleTemplate<TemplateImmutableData>(_endpoint, collectionName, templateId);
         }
+
+        public SingleTemplateLogs GetLogs(string collectionName, long templateId)
+        {
+            return new SingleTemplateLogs(_endpoint, collectionName, templateId);
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
         IPageable<AllSchemas>,
         ILimitable<AllSchemas>,
         IOrderable<AllSchemas>,
-        ISortable<AllSchemas, AllSchemasSortTypes>,
+        ISortable<AllSchemas, AllSchemasSortType>,
         IExecutable<AllSchemasResponse>
     {
         internal AllSchemas(string endpoint)

@@ -532,6 +532,22 @@ namespace SUS.AtomicAssets.Client
             return (Type)maxSupplyFilterable;
         }
     }
-    
 
+    public static class HideContractsFilterableExtensionMethods
+    {
+        public static Type HideContracts<Type>(this IHideContractsFilterable<Type> hideContractsFilterable, bool hideContracts)
+        {
+            hideContractsFilterable.AddQuery("hide_contracts", hideContracts.ToString());
+            return (Type)hideContractsFilterable;
+        }
+    }
+
+    public static class TransferFilterableExtensionMethods
+    {
+        public static Type Transfers<Type>(this ITransfersFilterable<Type> transfersFilterable, List<long> transfers)
+        {
+            transfersFilterable.AddMultiArgQuery("transfer_id", transfers.Select(t=>t.ToString()).ToList());
+            return (Type)transfersFilterable;
+        }
+    }
 }

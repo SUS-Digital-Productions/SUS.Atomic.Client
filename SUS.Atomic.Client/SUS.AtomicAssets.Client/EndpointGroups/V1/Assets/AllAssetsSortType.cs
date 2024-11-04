@@ -1,6 +1,6 @@
 ﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Assets
 {
-    public enum AllAssetsSortTypes
+    public enum AllAssetsSortType
     {
         ASSET_ID,
         MINTED,

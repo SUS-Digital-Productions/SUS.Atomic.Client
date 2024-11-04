@@ -28,7 +28,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
         IPageable<AllTemplates<TemplateImmutableData>>,
         ILimitable<AllTemplates<TemplateImmutableData>>,
         IOrderable<AllTemplates<TemplateImmutableData>>,
-        ISortable<AllTemplates<TemplateImmutableData>, AllTemplatesSortTypes>,
+        ISortable<AllTemplates<TemplateImmutableData>, AllTemplatesSortType>,
         IExecutable<AllTemplatesResponse<TemplateImmutableData>>
     {
         internal AllTemplates(string endpoint)

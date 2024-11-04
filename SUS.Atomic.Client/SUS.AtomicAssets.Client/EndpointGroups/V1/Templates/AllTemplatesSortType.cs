@@ -1,6 +1,6 @@
 ﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
 {
-    public enum AllTemplatesSortTypes
+    public enum AllTemplatesSortType
     {
         NAME,
         CREATED

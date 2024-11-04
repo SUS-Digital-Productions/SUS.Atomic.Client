@@ -1,6 +1,6 @@
 ﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
 {
-    public enum AllSchemasSortTypes
+    public enum AllSchemasSortType
     {
         CREATED,
         SCHEMA_NAME,

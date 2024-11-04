@@ -22,7 +22,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Collections
         IPageable<AllCollections<CollectionData>>,
         ILimitable<AllCollections<CollectionData>>,
         IOrderable<AllCollections<CollectionData>>,
-        ISortable<AllCollections<CollectionData>, AllCollectionSortTypes>,
+        ISortable<AllCollections<CollectionData>, AllCollectionSortType>,
         IExecutable<AllCollectionsResponse<CollectionData>>
     {
         internal AllCollections(string endpoint)

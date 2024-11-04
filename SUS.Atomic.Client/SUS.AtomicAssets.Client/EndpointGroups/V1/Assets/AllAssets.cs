@@ -36,7 +36,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Assets
         IPageable<AllAssets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         ILimitable<AllAssets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IOrderable<AllAssets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
-        ISortable<AllAssets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>, AllAssetsSortTypes>,
+        ISortable<AllAssets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>, AllAssetsSortType>,
         IExecutable<AllAssetsResponse<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>
     {
         internal AllAssets(string endpoint)
