@@ -8,8 +8,8 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
         :
         BaseEndpointGroup,
         IAssetOfferFilterable<BurnsAccount>,
-        ICollectionBlocklistable<BurnsAccount>,
-        ICollectionAllowlistable<BurnsAccount>,
+        ICollectionsBlocklistable<BurnsAccount>,
+        ICollectionsAllowlistable<BurnsAccount>,
         IExecutable<BurnsAccountResponse>
     {
         internal BurnsAccount(string endpoint, string account)

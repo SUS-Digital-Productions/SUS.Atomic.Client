@@ -98,7 +98,7 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class BurnedAssetsFilterableExtensionMethods
+    public static class BurnedAssetFilterableExtensionMethods
     {
         public static Type Burned<Type>(this IBurnedAssetsFilterable<Type> burnedAssetsFilterable, bool burned)
         {
@@ -118,7 +118,7 @@ namespace SUS.AtomicAssets.Client
 
     public static class CollectionBlocklistableExtensionMethods
     {
-        public static Type BlocklistCollections<Type>(this ICollectionBlocklistable<Type> collectionBlocklistable, List<string> collections)
+        public static Type BlocklistCollections<Type>(this ICollectionsBlocklistable<Type> collectionBlocklistable, List<string> collections)
         {
             collectionBlocklistable.AddMultiArgQuery("collection_blacklist", collections);
             return (Type)collectionBlocklistable;
@@ -127,7 +127,7 @@ namespace SUS.AtomicAssets.Client
 
     public static class CollectionAllowlistableExtensionMethods
     {
-        public static Type AllowlistCollections<Type>(this ICollectionAllowlistable<Type> collectionAllowlistable, List<string> collections)
+        public static Type AllowlistCollections<Type>(this ICollectionsAllowlistable<Type> collectionAllowlistable, List<string> collections)
         {
             collectionAllowlistable.AddMultiArgQuery("collection_whitelist", collections);
             return (Type)collectionAllowlistable;
@@ -257,7 +257,7 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class SendersFilterableExtensionMethods
+    public static class SenderFilterableExtensionMethods
     {
         public static Type Senders<Type>(this ISendersFilterable<Type> sendersFilterable, List<string> senders)
         {
@@ -266,7 +266,7 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class RecipientsFilterableExtensionMethods
+    public static class RecipientFilterableExtensionMethods
     {
         public static Type Receivers<Type>(this IRecipientsFilterable<Type> recipientsFilterable, List<string> recipients)
         {
@@ -295,9 +295,9 @@ namespace SUS.AtomicAssets.Client
 
     public static class StateFilterableExtensionMethods
     {
-        public static Type State<Type>(this IStateFilterable<Type> stateFilterable, string state)
+        public static Type State<Type, TEnum>(this IStateFilterable<Type, TEnum> stateFilterable, TEnum state) where TEnum : Enum
         {
-            stateFilterable.AddQuery("state", state);
+            stateFilterable.AddQuery("state", Convert.ToInt32(state).ToString());
             return (Type)stateFilterable;
         }
     }
@@ -389,7 +389,7 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class OnlyDuplicateTemplatesFilterableExtensionMethods
+    public static class OnlyDuplicateTemplateFilterableExtensionMethods
     {
         public static Type OnlyDuplicateTemplates<Type>(this IOnlyDuplicateTemplatesFilterable<Type> onlyDuplicateTemplatesFilterable, bool onlyDuplicates)
         {
@@ -398,7 +398,7 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class HasBackedTokensFilterableExtensionMethods
+    public static class HasBackedTokenFilterableExtensionMethods
     {
         public static Type HasBackedTokens<Type>(this IHasBackedTokensFilterable<Type> hasBackedTokensFilterable, bool hasBackedTokens)
         {
@@ -418,7 +418,7 @@ namespace SUS.AtomicAssets.Client
 
     public static class TemplateBlocklistableExtensionMethods
     {
-        public static Type BlockTemplates<Type>(this ITemplateBlocklistable<Type> templateBlocklistable, List<string> templates)
+        public static Type BlockTemplates<Type>(this ITemplatesBlocklistable<Type> templateBlocklistable, List<string> templates)
         {
             templateBlocklistable.AddMultiArgQuery("template_blacklist", templates);
             return (Type)templateBlocklistable;
@@ -427,14 +427,14 @@ namespace SUS.AtomicAssets.Client
 
     public static class TemplateAllowlistableExtensionMethods
     {
-        public static Type AllowTemplates<Type>(this ITemplateAllowlistable<Type> templateAllowlistable, List<string> templates)
+        public static Type AllowTemplates<Type>(this ITemplatesAllowlistable<Type> templateAllowlistable, List<string> templates)
         {
             templateAllowlistable.AddMultiArgQuery("template_whitelist", templates);
             return (Type)templateAllowlistable;
         }
     }
 
-    public static class HideTemplatesByAccountsFilterableExtensionMethods
+    public static class HideTemplateByAccountFilterableExtensionMethods
     {
         public static Type HideTemplatesByAccounts<Type>(this IHideTemplatesByAccountsFilterable<Type> hideTemplatesByAccountsFilterable, string account)
         {
@@ -515,7 +515,7 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class HasAssetsFilterableExtensionMethods
+    public static class HasAssetFilterableExtensionMethods
     {
         public static Type HasAssets<Type>(this IHasAssetsFilterable<Type> hasAssetsFilterable, bool hasAssets)
         {
@@ -533,7 +533,7 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class HideContractsFilterableExtensionMethods
+    public static class HideContractFilterableExtensionMethods
     {
         public static Type HideContracts<Type>(this IHideContractsFilterable<Type> hideContractsFilterable, bool hideContracts)
         {

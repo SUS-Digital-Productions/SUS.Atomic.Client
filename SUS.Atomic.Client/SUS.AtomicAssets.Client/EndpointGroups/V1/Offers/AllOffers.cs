@@ -11,7 +11,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
         IRecipientsFilterable<AllOffers>,
         IMemoFilterable<AllOffers>,
         IMemoMatchable<AllOffers>,
-        IStateFilterable<AllOffers>,
+        IStateFilterable<AllOffers, AllOffersStateType>,
         IIsRecipientContractFilterable<AllOffers>,
         IAssetsFilterable<AllOffers>,
         ITemplateFilterable<AllOffers>,

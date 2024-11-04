@@ -6,7 +6,7 @@
 
         internal Transfers(string endpoint)
         {
-            _endpoint = endpoint;
+            _endpoint = $"{endpoint}/v1/transfers";
         }
 
         public AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Get()

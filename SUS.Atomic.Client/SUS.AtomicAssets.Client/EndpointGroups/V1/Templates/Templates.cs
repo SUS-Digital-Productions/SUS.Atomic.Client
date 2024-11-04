@@ -5,7 +5,7 @@
         private readonly string _endpoint;
         internal Templates(string endpoint)
         {
-            _endpoint = endpoint;
+            _endpoint = $"{endpoint}/v1/templates";
         }
 
         public AllTemplates<TemplateImmutableData> Get()

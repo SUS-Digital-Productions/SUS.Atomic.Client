@@ -5,4 +5,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SUS.Atomic.Base\SUS.Atomic.Base.csproj" />
+  </ItemGroup>
+
 </Project>

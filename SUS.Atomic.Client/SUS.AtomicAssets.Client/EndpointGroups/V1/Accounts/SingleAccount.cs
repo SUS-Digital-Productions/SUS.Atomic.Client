@@ -6,8 +6,8 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
     public class SingleAccount :
         BaseEndpointGroup,
         IAssetOfferFilterable<SingleAccount>,
-        ICollectionBlocklistable<SingleAccount>,
-        ICollectionAllowlistable<SingleAccount>,
+        ICollectionsBlocklistable<SingleAccount>,
+        ICollectionsAllowlistable<SingleAccount>,
         IExecutable<SingleAccountResponse>
     {
         internal SingleAccount(string endpoint, string account)
