@@ -1,13 +1,13 @@
 ﻿using SUS.Atomic.Base;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SUS.Atomic.Base.Interfaces;
+using SUS.AtomicTools.Client.Responses.V1.Links.SingleLink;
 
 namespace SUS.AtomicTools.Client.EndpointGroups.V1.Links
 {
-    public class SingleLink
+    public class SingleLink<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup
+        BaseEndpointGroup,
+        IExecutable<SingleLinkResponse<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>
     {
         internal SingleLink(string endpoint, long linkId)
         {

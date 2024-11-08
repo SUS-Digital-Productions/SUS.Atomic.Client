@@ -4,7 +4,8 @@ using SUS.AtomicMarket.Client.Responses.V1.Assets.SingleAsset;
 
 namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Assets
 {
-    public class SingleAsset<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> :
+    public class SingleAsset<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
         BaseEndpointGroup,
         IExecutable<SingleAssetResponse<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>
     {

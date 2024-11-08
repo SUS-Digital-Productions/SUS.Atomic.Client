@@ -2,6 +2,7 @@
 using SUS.AtomicAssets.Client.Responses;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -93,7 +94,7 @@ namespace SUS.AtomicAssets.Client
 
         public static Type Templates<Type>(this ITemplatesFilterable<Type> templatesFilterable, List<long> templates)
         {
-            templatesFilterable.AddMultiArgQuery("template_id", templates.Select(t=>t.ToString()).ToList());
+            templatesFilterable.AddMultiArgQuery("template_id", templates.Select(t => t.ToString()).ToList());
             return (Type)templatesFilterable;
         }
     }
@@ -295,9 +296,9 @@ namespace SUS.AtomicAssets.Client
 
     public static class StateFilterableExtensionMethods
     {
-        public static Type State<Type, TEnum>(this IStateFilterable<Type, TEnum> stateFilterable, TEnum state) where TEnum : Enum
+        public static Type State<Type, TEnum>(this IStateFilterable<Type, TEnum> stateFilterable, List<TEnum> states) where TEnum : Enum
         {
-            stateFilterable.AddQuery("state", Convert.ToInt32(state).ToString());
+            stateFilterable.AddMultiArgQuery("state", states.Select(state => Convert.ToInt32(state).ToString()).ToList());
             return (Type)stateFilterable;
         }
     }
@@ -313,9 +314,15 @@ namespace SUS.AtomicAssets.Client
 
     public static class AssetFilterableExtensionMethods
     {
-        public static Type Assets<Type>(this IAssetsFilterable<Type> assetsFilterable, List<string> assets)
+        public static Type Asset<Type>(this IAssetFilterable<Type> assetFilterable, long assetId)
         {
-            assetsFilterable.AddMultiArgQuery("asset_id", assets);
+            assetFilterable.AddQuery("asset_id", assetId.ToString());
+            return (Type)assetFilterable;
+        }
+
+        public static Type Assets<Type>(this IAssetsFilterable<Type> assetsFilterable, List<long> assets)
+        {
+            assetsFilterable.AddMultiArgQuery("asset_id", assets.Select(asset => asset.ToString()).ToList());
             return (Type)assetsFilterable;
         }
     }
@@ -418,18 +425,18 @@ namespace SUS.AtomicAssets.Client
 
     public static class TemplateBlocklistableExtensionMethods
     {
-        public static Type BlockTemplates<Type>(this ITemplatesBlocklistable<Type> templateBlocklistable, List<string> templates)
+        public static Type BlockTemplates<Type>(this ITemplatesBlocklistable<Type> templateBlocklistable, List<long> templates)
         {
-            templateBlocklistable.AddMultiArgQuery("template_blacklist", templates);
+            templateBlocklistable.AddMultiArgQuery("template_blacklist", templates.Select(template => template.ToString()).ToList());
             return (Type)templateBlocklistable;
         }
     }
 
     public static class TemplateAllowlistableExtensionMethods
     {
-        public static Type AllowTemplates<Type>(this ITemplatesAllowlistable<Type> templateAllowlistable, List<string> templates)
+        public static Type AllowTemplates<Type>(this ITemplatesAllowlistable<Type> templateAllowlistable, List<long> templates)
         {
-            templateAllowlistable.AddMultiArgQuery("template_whitelist", templates);
+            templateAllowlistable.AddMultiArgQuery("template_whitelist", templates.Select(template=>template.ToString()).ToList());
             return (Type)templateAllowlistable;
         }
     }
@@ -450,6 +457,12 @@ namespace SUS.AtomicAssets.Client
             buyerFilterable.AddQuery("buyer", buyer);
             return (Type)buyerFilterable;
         }
+
+        public static Type Buyers<Type>(this IBuyersFilterable<Type> buyersFilterable, List<string> buyers)
+        {
+            buyersFilterable.AddMultiArgQuery("buyer", buyers);
+            return (Type)buyersFilterable;
+        }
     }
 
     public static class SellerFilterableExtensionMethods
@@ -458,6 +471,12 @@ namespace SUS.AtomicAssets.Client
         {
             sellerFilterable.AddQuery("seller", seller);
             return (Type)sellerFilterable;
+        }
+
+        public static Type Sellers<Type>(this ISellersFilterable<Type> sellersFilterable, List<string> sellers)
+        {
+            sellersFilterable.AddMultiArgQuery("seller", sellers);
+            return (Type)sellersFilterable;
         }
     }
 
@@ -546,8 +565,206 @@ namespace SUS.AtomicAssets.Client
     {
         public static Type Transfers<Type>(this ITransfersFilterable<Type> transfersFilterable, List<long> transfers)
         {
-            transfersFilterable.AddMultiArgQuery("transfer_id", transfers.Select(t=>t.ToString()).ToList());
+            transfersFilterable.AddMultiArgQuery("transfer_id", transfers.Select(t => t.ToString()).ToList());
             return (Type)transfersFilterable;
+        }
+    }
+
+    public static class CreatorFilterableExtensionMethods
+    {
+        public static Type Creator<Type>(this ICreatorFilterable<Type> creatorFilterable, string creator)
+        {
+            creatorFilterable.AddQuery("creator", creator);
+            return (Type)creatorFilterable;
+        }
+    }
+
+    public static class ClaimerFilterableExtensionMethods
+    {
+        public static Type Claimer<Type>(this IClaimerFilterable<Type> claimerFilterable, string claimer)
+        {
+            claimerFilterable.AddQuery("claimer", claimer);
+            return (Type)claimerFilterable;
+        }
+    }
+
+    public static class PublicKeyFilterableExtensionMethods
+    {
+        public static Type PublicKey<Type>(this IPublicKeyFilterable<Type> pubkeyFilterable, string pubkey)
+        {
+            pubkeyFilterable.AddQuery("public_key", pubkey);
+            return (Type)pubkeyFilterable;
+        }
+    }
+
+    public static class LinkFilterableExtensionMethods
+    {
+        public static Type Links<Type>(this ILinksFilterable<Type> linksFilterable, List<string> links)
+        {
+            linksFilterable.AddMultiArgQuery("link_id", links);
+            return (Type)linksFilterable;
+        }
+    }
+
+    public static class MinAssetsFilterableExtensionMethods
+    {
+        public static Type MinAssets<Type>(this IMinAssetsFilterable<Type> minAssetsFilterable, int minAssets)
+        {
+            minAssetsFilterable.AddQuery("min_assets", minAssets.ToString());
+            return (Type)minAssetsFilterable;
+        }
+    }
+
+    public static class MaxAssetsFilterableExtensionMethods
+    {
+        public static Type MaxAssets<Type>(this IMaxAssetsFilterable<Type> maxAssetsFilterable, int maxAssets)
+        {
+            maxAssetsFilterable.AddQuery("max_assets", maxAssets.ToString());
+            return (Type)maxAssetsFilterable;
+        }
+    }
+
+    public static class ShowSellerContractsExtensionMethods
+    {
+        public static Type ShowSellerContracts<Type>(this IShowSellerContracts<Type> showSellerContracts, bool showContracts)
+        {
+            showSellerContracts.AddQuery("show_seller_contracts", showContracts.ToString());
+            return (Type)showSellerContracts;
+        }
+    }
+
+    public static class ContractAllowlistableExtensionMethods
+    {
+        public static Type ContractAllowlist<Type>(this IContractAllowlistable<Type> contractAllowlistable, string contractAllowlist)
+        {
+            contractAllowlistable.AddQuery("contract_whitelist", contractAllowlist);
+            return (Type)contractAllowlistable;
+        }
+    }
+
+    public static class SellerBlocklistableExtensionMethods
+    {
+        public static Type SellersBlocklist<Type>(this ISellersBlocklistable<Type> sellerBlocklistable, List<string> sellers)
+        {
+            sellerBlocklistable.AddMultiArgQuery("seller_blacklist", sellers);
+            return (Type)sellerBlocklistable;
+        }
+    }
+
+    public static class BuyerBlocklistableExtensionMethods
+    {
+        public static Type BuyerBlocklist<Type>(this IBuyersBlocklistable<Type> buyerBlocklistable, List<string> buyers)
+        {
+            buyerBlocklistable.AddMultiArgQuery("buyer_blacklist", buyers);
+            return (Type)buyerBlocklistable;
+        }
+    }
+
+    public static class MarketplaceFilterableExtensionMethods
+    {
+        public static Type Marketplaces<Type>(this IMarketplacesFilterable<Type> marketplacesFilterable, List<string> marketplaces)
+        {
+            marketplacesFilterable.AddMultiArgQuery("marketplace", marketplaces);
+            return (Type)marketplacesFilterable;
+        }
+    }
+
+    public static class TakerMarketplaceFilterableExtensionMethods
+    {
+        public static Type TakerMarketplaces<Type>(this ITakerMarketplacesFilterable<Type> takerMarketplaceFilterable, List<string> takerMarketplaces)
+        {
+            takerMarketplaceFilterable.AddMultiArgQuery("taker_marketplace", takerMarketplaces);
+            return (Type)takerMarketplaceFilterable;
+        }
+    }
+
+    public static class MakerMarketplaceFilterableExtensionMethods
+    {
+        public static Type MakerMarketplace<Type>(this IMakerMarketplacesFilterable<Type> makerMarketplacesFilterable, List<string> makerMarketplaces)
+        {
+            makerMarketplacesFilterable.AddMultiArgQuery("maker_marketplace", makerMarketplaces);
+            return (Type)makerMarketplacesFilterable;
+        }
+    }
+
+    public static class MinPriceFilterableExtensionMethods
+    {
+        public static Type MinPrice<Type>(this IMinPriceFilterable<Type> minPriceFilterable, double minPrice)
+        {
+            minPriceFilterable.AddQuery("min_price", minPrice.ToString());
+            return (Type)minPriceFilterable;
+        }
+    }
+
+    public static class MaxPriceFilterableExtensionMethods
+    {
+        public static Type MaxPrice<Type>(this IMaxPriceFilterable<Type> maxPriceFilterable, double maxPrice)
+        {
+            maxPriceFilterable.AddQuery("max_price", maxPrice.ToString());
+            return (Type)maxPriceFilterable;
+        }
+    }
+
+    public static class MinTemplateMintFilterableExtensionMethods
+    {
+        public static Type MinTemplateMint<Type>(this IMinTemplateMintFilterable<Type> minTemplateMintFilterable, int minTemplateMint)
+        {
+            minTemplateMintFilterable.AddQuery("min_template_mint", minTemplateMint.ToString());
+            return (Type)minTemplateMintFilterable;
+        }
+    }
+
+    public static class MaxTemplateMintFilterableExtensionMethods
+    {
+        public static Type MaxTemplateMint<Type>(this IMaxTemplateMintFilterable<Type> maxTemplateMintFilterable, int maxTemplateMint)
+        {
+            maxTemplateMintFilterable.AddQuery("max_template_mint", maxTemplateMint.ToString());
+            return (Type)maxTemplateMintFilterable;
+        }
+    }
+
+    public static class SaleFilterableExtensionMethods
+    {
+        public static Type Sales<Type>(this ISalesFilterable<Type> salesFilterable, List<long> sales)
+        {
+            salesFilterable.AddMultiArgQuery("sale_id", sales.Select(sale => sale.ToString()).ToList());
+            return (Type)salesFilterable;
+        }
+    }
+
+    public static class BidderFilterableExtensionMethods
+    {
+        public static Type Bidder<Type>(this IBidderFilterable<Type> bidderFilterable, string bidder)
+        {
+            bidderFilterable.AddQuery("bidder", bidder);
+            return (Type)bidderFilterable;
+        }
+    }
+
+    public static class ParticipantFilterableExtensionMethods
+    {
+        public static Type Participant<Type>(this IParticipantFilterable<Type> participantFilterable, string participant)
+        {
+            participantFilterable.AddQuery("participant", participant);
+            return (Type)participantFilterable;
+        }
+    }
+
+    public static class HideEmptyAuctionsExtensionMethods
+    {
+        public static Type HideEmptyAuctions<Type>(this IHideEmptyAuctions<Type> hideEmptyAuctions, bool hide)
+        {
+            hideEmptyAuctions.AddQuery("hide_empty_auctions", hide.ToString());
+            return (Type)hideEmptyAuctions;
+        }
+    }
+
+    public static class AuctionFilterableExtensionMethods
+    {
+        public static Type Auctions<Type>(this IAuctionsFilterable<Type> auctionsFilterable, List<long> auctions)
+        {
+            auctionsFilterable.AddMultiArgQuery("auction_id", auctions.Select(auction=>auction.ToString()).ToList());
+            return (Type)auctionsFilterable;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace SUS.AtomicAssets.Client
 {
     public class AtomicAssetsClient<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData, CollectionData>
     {
-        private string _endpoint;
+        private readonly string _endpoint;
         public Accounts Accounts { get; }
         public Schemas Schemas { get; }
         public Burns Burns { get; }

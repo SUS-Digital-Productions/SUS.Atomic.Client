@@ -1,6 +1,6 @@
 ﻿namespace SUS.AtomicTools.Client.EndpointGroups.V1.Links
 {
-    public class Links
+    public class Links<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
     {
         private readonly string _endpoint;
 
@@ -9,14 +9,14 @@
             _endpoint = $"{endpoint}/v1/links";
         }
 
-        public AllLinks Get()
+        public AllLinks<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Get()
         {
-            return new AllLinks(_endpoint);
+            return new AllLinks<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
         }
 
-        public SingleLink Get(long linkId)
+        public SingleLink<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Get(long linkId)
         {
-            return new SingleLink(_endpoint, linkId);
+            return new SingleLink<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint, linkId);
         }
 
         public SingleLinkLogs GetLogs(long linkId)
