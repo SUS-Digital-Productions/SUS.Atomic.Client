@@ -8,7 +8,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V2.Sales
         :
         BaseEndpointGroup,
         IStateFilterable<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>, AllSalesStateType>,
-        IHideTemplatesByAccountsFilterable<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
+        IHideTemplatesByAccounts<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IMaxAssetsFilterable<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IMinAssetsFilterable<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IShowSellerContracts<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

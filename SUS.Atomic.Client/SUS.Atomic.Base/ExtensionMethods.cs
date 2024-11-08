@@ -405,18 +405,18 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class HasBackedTokenFilterableExtensionMethods
+    public static class HasBackedTokenExtensionMethods
     {
-        public static Type HasBackedTokens<Type>(this IHasBackedTokensFilterable<Type> hasBackedTokensFilterable, bool hasBackedTokens)
+        public static Type HasBackedTokens<Type>(this IHasBackedTokens<Type> hasBackedTokensFilterable, bool hasBackedTokens)
         {
             hasBackedTokensFilterable.AddQuery("has_backed_tokens", hasBackedTokens.ToString());
             return (Type)hasBackedTokensFilterable;
         }
     }
 
-    public static class HasTemplateBuyofferFilterableExtensionMethods
+    public static class HasTemplateBuyofferExtensionMethods
     {
-        public static Type HasTemplateBuyOffer<Type>(this IHasTemplateBuyofferFilterable<Type> hasTemplateBuyofferFilterable, bool hasTemplateBuyOffer)
+        public static Type HasTemplateBuyOffer<Type>(this IHasTemplateBuyoffer<Type> hasTemplateBuyofferFilterable, bool hasTemplateBuyOffer)
         {
             hasTemplateBuyofferFilterable.AddQuery("has_template_buyoffer", hasTemplateBuyOffer.ToString());
             return (Type)hasTemplateBuyofferFilterable;
@@ -436,14 +436,14 @@ namespace SUS.AtomicAssets.Client
     {
         public static Type AllowTemplates<Type>(this ITemplatesAllowlistable<Type> templateAllowlistable, List<long> templates)
         {
-            templateAllowlistable.AddMultiArgQuery("template_whitelist", templates.Select(template=>template.ToString()).ToList());
+            templateAllowlistable.AddMultiArgQuery("template_whitelist", templates.Select(template => template.ToString()).ToList());
             return (Type)templateAllowlistable;
         }
     }
 
-    public static class HideTemplateByAccountFilterableExtensionMethods
+    public static class HideTemplateByAccountExtensionMethods
     {
-        public static Type HideTemplatesByAccounts<Type>(this IHideTemplatesByAccountsFilterable<Type> hideTemplatesByAccountsFilterable, string account)
+        public static Type HideTemplatesByAccounts<Type>(this IHideTemplatesByAccounts<Type> hideTemplatesByAccountsFilterable, string account)
         {
             hideTemplatesByAccountsFilterable.AddQuery("hide_templates_by_accounts", account);
             return (Type)hideTemplatesByAccountsFilterable;
@@ -534,12 +534,12 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class HasAssetFilterableExtensionMethods
+    public static class HasAssetExtensionMethods
     {
-        public static Type HasAssets<Type>(this IHasAssetsFilterable<Type> hasAssetsFilterable, bool hasAssets)
+        public static Type HasAssets<Type>(this IHasAssets<Type> hasAssets, bool has)
         {
-            hasAssetsFilterable.AddQuery("has_assets", hasAssets.ToString());
-            return (Type)hasAssetsFilterable;
+            hasAssets.AddQuery("has_assets", has.ToString());
+            return (Type)hasAssets;
         }
     }
 
@@ -552,12 +552,12 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
-    public static class HideContractFilterableExtensionMethods
+    public static class HideContractExtensionMethods
     {
-        public static Type HideContracts<Type>(this IHideContractsFilterable<Type> hideContractsFilterable, bool hideContracts)
+        public static Type HideContracts<Type>(this IHideContracts<Type> hideContracts, bool hide)
         {
-            hideContractsFilterable.AddQuery("hide_contracts", hideContracts.ToString());
-            return (Type)hideContractsFilterable;
+            hideContracts.AddQuery("hide_contracts", hide.ToString());
+            return (Type)hideContracts;
         }
     }
 
@@ -763,8 +763,81 @@ namespace SUS.AtomicAssets.Client
     {
         public static Type Auctions<Type>(this IAuctionsFilterable<Type> auctionsFilterable, List<long> auctions)
         {
-            auctionsFilterable.AddMultiArgQuery("auction_id", auctions.Select(auction=>auction.ToString()).ToList());
+            auctionsFilterable.AddMultiArgQuery("auction_id", auctions.Select(auction => auction.ToString()).ToList());
             return (Type)auctionsFilterable;
         }
     }
+
+    public static class AccountAllowlistableExtensionMethods
+    {
+        public static Type AllowedAccounts<Type>(this IAccountAllowlistable<Type> accountAllowlistable, string account)
+        {
+            accountAllowlistable.AddQuery("account_whitelist", account);
+            return (Type)accountAllowlistable;
+        }
+    }
+
+    public static class AccountBlocklistableExtensionMethods
+    {
+        public static Type BlockedAccounts<Type>(this IAccountBlocklistable<Type> accountBlocklistable, string account)
+        {
+            accountBlocklistable.AddQuery("account_blacklist", account);
+            return (Type)accountBlocklistable;
+        }
+    }
+
+    public static class SenderAssetAllowlistableExtensionMethods
+    {
+        public static Type AllowSenderAsset<Type>(this ISenderAssetAllowlistable<Type> senderAssetAllowlistable, long assetId)
+        {
+            senderAssetAllowlistable.AddQuery("sender_asset_whitelist", assetId.ToString());
+            return (Type)senderAssetAllowlistable;
+        }
+    }
+
+    public static class SenderAssetBlocklistableExtensionMethods
+    {
+        public static Type BlockSenderAsset<Type>(this ISenderAssetBlocklistable<Type> senderAssetBlocklistable, long assetId)
+        {
+            senderAssetBlocklistable.AddQuery("sender_asset_blacklist", assetId.ToString());
+            return (Type)senderAssetBlocklistable;
+        }
+    }
+
+    public static class RecipientAssetAllowlistableExtensionMethods
+    {
+        public static Type AllowRecipientAsset<Type>(this IRecipientAssetAllowlistable<Type> recipientAssetAllowlistable, long assetId)
+        {
+            recipientAssetAllowlistable.AddQuery("recipient_asset_whitelist", assetId.ToString());
+            return (Type)recipientAssetAllowlistable;
+        }
+    }
+
+    public static class RecipientAssetBlocklistableExtensionMethods
+    {
+        public static Type BlockRecipientAsset<Type>(this IRecipientAssetBlocklistable<Type> recipientAssetBlocklistable, long assetId)
+        {
+            recipientAssetBlocklistable.AddQuery("recipient_asset_blacklist", assetId.ToString());
+            return (Type)recipientAssetBlocklistable;
+        }
+    }
+
+    public static class HideEmptyOffersExtensionMethods
+    {
+        public static Type HideEmptyOffers<Type>(this IHideEmptyOffers<Type> hideEmptyOffers, bool hide)
+        {
+            hideEmptyOffers.AddQuery("hide_empty_offers", hide.ToString());
+            return (Type)hideEmptyOffers;
+        }
+    }
+
+    public static class OfferFilterableExtensionMethods
+    {
+        public static Type Offers<Type>(this IOffersFilterable<Type> offerFilterable, List<long> offers)
+        {
+            offerFilterable.AddMultiArgQuery("offer_id", offers.Select(offer => offer.ToString()).ToList());
+            return (Type)offerFilterable;
+        }
+    }
+
 }

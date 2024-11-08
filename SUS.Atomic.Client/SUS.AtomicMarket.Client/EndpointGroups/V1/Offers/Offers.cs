@@ -1,4 +1,8 @@
-﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Offers
 {
     public class Offers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
     {

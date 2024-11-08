@@ -1,11 +1,10 @@
 ﻿using SUS.Atomic.Base;
 using SUS.Atomic.Base.Interfaces;
-using SUS.AtomicAssets.Client.Responses.V1.Offers.SingleOfferLogs;
+using SUS.AtomicMarket.Client.Responses.V1.Offers.SingleOfferLogs;
 
-namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Offers
 {
-    public class SingleOfferLogs
-        :
+    public class SingleOfferLogs :
         BaseEndpointGroup,
         IPageable<SingleOfferLogs>,
         ILimitable<SingleOfferLogs>,

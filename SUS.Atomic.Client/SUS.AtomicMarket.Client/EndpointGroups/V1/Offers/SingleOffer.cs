@@ -1,8 +1,8 @@
 ﻿using SUS.Atomic.Base;
 using SUS.Atomic.Base.Interfaces;
-using SUS.AtomicAssets.Client.Responses.V1.Offers.SingleOffer;
+using SUS.AtomicMarket.Client.Responses.V1.Offers.SingleOffer;
 
-namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Offers
 {
     public class SingleOffer<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :

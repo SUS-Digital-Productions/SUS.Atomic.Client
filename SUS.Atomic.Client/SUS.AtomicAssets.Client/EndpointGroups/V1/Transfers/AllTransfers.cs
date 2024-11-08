@@ -16,7 +16,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Transfers
         ITemplatesFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         ISchemasFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         ICollectionsFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
-        IHideContractsFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
+        IHideContracts<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         ITransfersFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IIdsFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         ILowerBoundable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
