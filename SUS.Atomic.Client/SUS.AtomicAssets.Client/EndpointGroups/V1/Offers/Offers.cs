@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
 {
     public class Offers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
 
         internal Offers(string endpoint)
         {

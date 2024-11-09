@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Collections
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Collections
 {
     public class Collections<CollectionData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
         internal Collections(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/collections";

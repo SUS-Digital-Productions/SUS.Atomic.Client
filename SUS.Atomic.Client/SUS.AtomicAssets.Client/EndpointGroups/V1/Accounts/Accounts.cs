@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
 {
     public class Accounts
+        :
+        BaseEndpointGroup
     {
-        private string _endpoint;
         internal Accounts(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/accounts";

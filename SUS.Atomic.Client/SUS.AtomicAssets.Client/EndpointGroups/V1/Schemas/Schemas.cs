@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
 {
     public class Schemas
+        :
+        BaseEndpointGroup
     {
-        private string _endpoint;
 
         internal Schemas(string endpoint)
         {

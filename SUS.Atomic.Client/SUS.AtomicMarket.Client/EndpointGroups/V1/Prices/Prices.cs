@@ -25,5 +25,15 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Prices
         {
             return new SingleAccountInventoryPrices(_endpoint, account);
         }
+
+        public AllTemplatePrices GetTemplatePrices()
+        {
+            return new AllTemplatePrices(_endpoint);
+        }
+
+        public AllSalePrices GetSalePrices()
+        {
+            return new AllSalePrices(_endpoint);
+        }
     }
 }

@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
 {
     public class Templates<TemplateImmutableData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
         internal Templates(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/templates";

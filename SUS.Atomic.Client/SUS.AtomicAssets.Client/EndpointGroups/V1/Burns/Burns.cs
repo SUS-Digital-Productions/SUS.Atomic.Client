@@ -1,9 +1,11 @@
-﻿namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
 {
     public class Burns
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
-
         internal Burns(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/burns";

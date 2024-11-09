@@ -3,6 +3,7 @@ using SUS.AtomicMarket.Client.EndpointGroups.V1.Auctions;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Buyoffers;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Config;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Offers;
+using SUS.AtomicMarket.Client.EndpointGroups.V1.Prices;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Sales;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Stats;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.TemplateBuyoffers;
@@ -38,6 +39,8 @@ namespace SUS.AtomicMarket.Client
 
         public StatsV2 StatsV2 { get; }
 
+        public Prices Prices { get; }
+
         public AtomicMarketClient(string endpoint)
         {
             _endpoint = $"{endpoint}/atomicmarket";
@@ -51,7 +54,8 @@ namespace SUS.AtomicMarket.Client
             Auctions = new Auctions<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
             Buyoffers = new Buyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
             Stats = new Stats<TemplateImmutableData>(_endpoint);
-            StatsV2 = new StatsV2(endpoint);
+            StatsV2 = new StatsV2(_endpoint);
+            Prices = new Prices(_endpoint);
         }
     }
 }
