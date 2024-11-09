@@ -1,8 +1,10 @@
 ﻿using SUS.AtomicMarket.Client.EndpointGroups.V1.Assets;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Auctions;
+using SUS.AtomicMarket.Client.EndpointGroups.V1.Buyoffers;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Config;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Offers;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Sales;
+using SUS.AtomicMarket.Client.EndpointGroups.V1.TemplateBuyoffers;
 using SUS.AtomicMarket.Client.EndpointGroups.V1.Transfers;
 using SUS.AtomicMarket.Client.EndpointGroups.V2.Sales;
 
@@ -22,6 +24,10 @@ namespace SUS.AtomicMarket.Client
 
         public Offers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Offers { get; }
 
+        public Buyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Buyoffers { get; }
+
+        public TemplateBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> TemplateBuyoffers { get; }
+
         public Sales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> Sales { get; }
 
         public SalesV2<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> SalesV2 { get; }
@@ -35,7 +41,9 @@ namespace SUS.AtomicMarket.Client
             Sales = new Sales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
             Config = new Config(_endpoint);
             Offers = new Offers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
+            TemplateBuyoffers = new TemplateBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
             Auctions = new Auctions<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
+            Buyoffers = new Buyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>(_endpoint);
         }
     }
 }

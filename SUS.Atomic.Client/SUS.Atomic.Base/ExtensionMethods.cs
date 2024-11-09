@@ -840,4 +840,12 @@ namespace SUS.AtomicAssets.Client
         }
     }
 
+    public static class BuyofferFilterableExtensionMethods
+    {
+        public static Type Buyoffers<Type>(this IBuyofferFilterable<Type> buyofferFilterable, List<long> buyoffers)
+        {
+            buyofferFilterable.AddMultiArgQuery("buyoffer_id", buyoffers.Select(buyoffer => buyoffer.ToString()).ToList());
+            return (Type)buyofferFilterable;
+        }
+    }
 }
