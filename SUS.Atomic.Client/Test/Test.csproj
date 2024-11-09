@@ -5,8 +5,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SUS.Atomic.Base\SUS.Atomic.Base.csproj" />
-    <ProjectReference Include="..\SUS.AtomicAssets.Client\SUS.AtomicAssets.Client.csproj" />
-  </ItemGroup>
 </Project>

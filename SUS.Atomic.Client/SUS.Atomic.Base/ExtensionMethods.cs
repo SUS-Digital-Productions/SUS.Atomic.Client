@@ -73,6 +73,12 @@ namespace SUS.AtomicAssets.Client
             collectionFilterable.AddQuery("collection_name", collection);
             return (Type)collectionFilterable;
         }
+
+        public static Type Collections<Type>(this ICollectionsFilterable<Type> collectionsFilterable, List<string> collections)
+        {
+            collectionsFilterable.AddMultiArgQuery("collection_name", collections);
+            return (Type)collectionsFilterable;
+        }
     }
 
     public static class OwnerMatchableExtensionMethods
