@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Collections
 {
     public class AllCollections<CollectionData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IAuthorFilterable<AllCollections<CollectionData>>,
         IMatchable<AllCollections<CollectionData>>,
         IAuthorizedAccountFilterable<AllCollections<CollectionData>>,

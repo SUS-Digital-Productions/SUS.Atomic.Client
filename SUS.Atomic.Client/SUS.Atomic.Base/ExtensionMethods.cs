@@ -848,4 +848,13 @@ namespace SUS.AtomicAssets.Client
             return (Type)buyofferFilterable;
         }
     }
+
+    public static class HideUnlistedTemplatesExtensionMethods
+    {
+        public static Type HideUnlistedTemplates<Type>(this IHideUnlistedTemplates<Type> hideUnlistedTemplates, bool hide)
+        {
+            hideUnlistedTemplates.AddQuery("hide_unlisted_templates", hide.ToString());
+            return (Type)hideUnlistedTemplates;
+        }
+    }
 }

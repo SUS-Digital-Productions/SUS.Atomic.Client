@@ -6,7 +6,7 @@ namespace SUS.AtomicTools.Client.EndpointGroups.V1.Config
 {
     public class Config
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<ConfigResponse>
     {
         internal Config(string endpoint)

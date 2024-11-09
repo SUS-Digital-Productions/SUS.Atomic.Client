@@ -6,7 +6,7 @@ namespace SUS.AtomicTools.Client.EndpointGroups.V1.Links
 {
     public class SingleLinkLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleLinkLogs>,
         ILimitable<SingleLinkLogs>,
         IOrderable<SingleLinkLogs>,

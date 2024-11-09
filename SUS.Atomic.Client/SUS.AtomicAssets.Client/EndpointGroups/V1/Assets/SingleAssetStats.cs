@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Assets
 {
     public class SingleAssetStats
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleAssetStatsResponse>
     {
         internal SingleAssetStats(string endpoint, long assetId)

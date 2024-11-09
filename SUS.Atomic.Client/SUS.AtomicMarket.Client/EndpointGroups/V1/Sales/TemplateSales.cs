@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Sales
 {
     public class TemplateSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         ITokenSymbolFilterable<TemplateSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IMinPriceFilterable<TemplateSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IMaxPriceFilterable<TemplateSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

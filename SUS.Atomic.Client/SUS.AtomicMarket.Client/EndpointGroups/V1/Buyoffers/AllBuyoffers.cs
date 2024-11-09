@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Buyoffers
 {
     public class AllBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IStateFilterable<AllBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>, AllBuyoffersStateType>,
         IMaxAssetsFilterable<AllBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IMinAssetsFilterable<AllBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

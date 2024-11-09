@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Collections
 {
     public class SingleCollection<CollectionData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleCollectionResponse<CollectionData>>
     {
         internal SingleCollection(string endpoint, string collectionName)

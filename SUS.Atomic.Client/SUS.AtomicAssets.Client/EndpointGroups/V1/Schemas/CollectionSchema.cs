@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
 {
     public class CollectionSchema
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<CollectionSchemaResponse>
     {
         internal CollectionSchema(string endpoint, string collection, string schema)

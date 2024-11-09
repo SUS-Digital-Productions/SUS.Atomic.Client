@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Auctions
 {
     public class AllAuctions<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IStateFilterable<AllAuctions<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>, AllAuctionsStateType>,
         IBidderFilterable<AllAuctions<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IParticipantFilterable<AllAuctions<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

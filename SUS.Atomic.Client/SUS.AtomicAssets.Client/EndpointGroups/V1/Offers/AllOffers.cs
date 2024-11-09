@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
 {
     public class AllOffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IAccountFilterable<AllOffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         ISendersFilterable<AllOffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IRecipientsFilterable<AllOffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

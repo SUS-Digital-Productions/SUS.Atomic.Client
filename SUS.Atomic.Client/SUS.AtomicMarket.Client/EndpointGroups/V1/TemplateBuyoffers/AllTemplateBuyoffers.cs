@@ -5,7 +5,7 @@ using SUS.AtomicMarket.Client.Responses.V1.TemplateBuyoffers.AllTemplateBuyoffer
 namespace SUS.AtomicMarket.Client.EndpointGroups.V1.TemplateBuyoffers
 {
     public class AllTemplateBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData> :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IStateFilterable<AllTemplateBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>, AllTemplateBuyoffersStateType>,
         IMaxAssetsFilterable<AllTemplateBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IMinAssetsFilterable<AllTemplateBuyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

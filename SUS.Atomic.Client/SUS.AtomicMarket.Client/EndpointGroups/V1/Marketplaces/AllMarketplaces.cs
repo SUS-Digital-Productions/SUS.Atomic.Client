@@ -9,7 +9,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Marketplaces
 {
     public class AllMarketplaces
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<AllMarketplacesResponse>
     {
         internal AllMarketplaces(string endpoint)

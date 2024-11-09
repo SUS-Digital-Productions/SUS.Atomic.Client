@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
 {
     public class AllTemplates<TemplateImmutableData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         ICollectionFilterable<AllTemplates<TemplateImmutableData>>,
         ISchemaFilterable<AllTemplates<TemplateImmutableData>>,
         IIssuedSupplyFilterable<AllTemplates<TemplateImmutableData>>,

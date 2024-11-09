@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
 {
     public class SingleTemplateStats
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleTemplateStatsResponse>
     {
         internal SingleTemplateStats(string endpoint, string collectionName, long templateId)

@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Offers
 {
     public class SingleOffer<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleOfferResponse<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>
     {
         internal SingleOffer(string endpoint, long offerId)

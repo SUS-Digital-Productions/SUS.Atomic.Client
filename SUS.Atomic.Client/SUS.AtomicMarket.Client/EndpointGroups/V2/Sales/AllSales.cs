@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V2.Sales
 {
     public class AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IStateFilterable<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>, AllSalesStateType>,
         IHideTemplatesByAccounts<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IMaxAssetsFilterable<AllSales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

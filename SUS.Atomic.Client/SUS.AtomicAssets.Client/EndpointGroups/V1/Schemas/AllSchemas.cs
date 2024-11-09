@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Schemas
 {
     public class AllSchemas
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         ICollectionFilterable<AllSchemas>,
         IAuthorizedAccountFilterable<AllSchemas>,
         ISchemaFilterable<AllSchemas>,

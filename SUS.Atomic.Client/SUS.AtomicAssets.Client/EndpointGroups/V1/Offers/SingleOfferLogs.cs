@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Offers
 {
     public class SingleOfferLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleOfferLogs>,
         ILimitable<SingleOfferLogs>,
         IOrderable<SingleOfferLogs>,

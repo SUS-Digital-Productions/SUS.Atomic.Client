@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Assets
 {
     public class SingleAssetLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleAssetLogs>,
         ILimitable<SingleAssetLogs>,
         IOrderable<SingleAssetLogs>,

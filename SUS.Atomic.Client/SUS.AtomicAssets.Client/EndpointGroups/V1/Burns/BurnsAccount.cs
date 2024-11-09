@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
 {
     public class BurnsAccount
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IAssetOfferFilterable<BurnsAccount>,
         ICollectionsBlocklistable<BurnsAccount>,
         ICollectionsAllowlistable<BurnsAccount>,

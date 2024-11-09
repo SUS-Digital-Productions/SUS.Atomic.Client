@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Assets
 {
     public class SingleAsset<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleAssetResponse<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>
     {
         internal SingleAsset(string endpoint)

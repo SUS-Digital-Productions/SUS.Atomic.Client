@@ -6,7 +6,7 @@ namespace SUS.AtomicTools.Client.EndpointGroups.V1.Links
 {
     public class SingleLink<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleLinkResponse<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>
     {
         internal SingleLink(string endpoint, long linkId)

@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Marketplaces
 {
     public class SingleMarketplace
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleMarketplaceResponse>
     {
         internal SingleMarketplace(string endpoint, string name)

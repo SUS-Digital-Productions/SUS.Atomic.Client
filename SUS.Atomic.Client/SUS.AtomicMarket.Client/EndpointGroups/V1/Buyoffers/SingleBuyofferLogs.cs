@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Buyoffers
 {
     public class SingleBuyofferLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleBuyofferLogs>,
         ILimitable<SingleBuyofferLogs>,
         IOrderable<SingleBuyofferLogs>,

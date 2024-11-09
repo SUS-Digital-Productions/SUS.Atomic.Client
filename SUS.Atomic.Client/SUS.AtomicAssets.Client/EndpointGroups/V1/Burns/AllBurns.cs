@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Burns
 {
     public class AllBurns
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IOwnerMatchable<AllBurns>,
         ICollectionFilterable<AllBurns>,
         ISchemaFilterable<AllBurns>,

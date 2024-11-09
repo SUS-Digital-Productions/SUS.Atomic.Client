@@ -4,7 +4,7 @@ using SUS.AtomicAssets.Client.Responses.V1.Accounts.SingleAccount;
 namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
 {
     public class SingleAccount :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IAssetOfferFilterable<SingleAccount>,
         ICollectionsBlocklistable<SingleAccount>,
         ICollectionsAllowlistable<SingleAccount>,

@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Transfers
 {
     public class AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IAccountFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         ISendersFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IRecipientsFilterable<AllTransfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

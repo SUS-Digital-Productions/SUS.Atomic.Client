@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Assets
 {
     public class SingleAssetSales
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IBuyerFilterable<SingleAssetSales>,
         ISellerFilterable<SingleAssetSales>,
         ITokenSymbolFilterable<SingleAssetSales>,

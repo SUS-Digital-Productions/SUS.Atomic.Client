@@ -6,7 +6,7 @@ namespace SUS.AtomicTools.Client.EndpointGroups.V1.Links
 {
     public class AllLinks<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         ICreatorFilterable<AllLinks<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IClaimerFilterable<AllLinks<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,
         IPublicKeyFilterable<AllLinks<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>>,

@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Sales
 {
     public class SingleSaleLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleSaleLogs>,
         ILimitable<SingleSaleLogs>,
         IOrderable<SingleSaleLogs>,

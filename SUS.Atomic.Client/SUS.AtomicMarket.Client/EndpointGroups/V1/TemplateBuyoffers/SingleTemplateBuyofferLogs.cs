@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.TemplateBuyoffers
 {
     public class SingleTemplateBuyofferLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleTemplateBuyofferLogs>,
         ILimitable<SingleTemplateBuyofferLogs>,
         IActionAllowlistable<SingleTemplateBuyofferLogs>,

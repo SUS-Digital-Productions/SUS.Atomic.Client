@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
 {
     public class SingleTemplate<TemplateImmutableData>
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleTemplateResponse<TemplateImmutableData>>
     {
         internal SingleTemplate(string endpoint, string collectionName, long templateId)

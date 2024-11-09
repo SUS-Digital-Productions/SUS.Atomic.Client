@@ -5,7 +5,7 @@ using SUS.AtomicMarket.Client.Responses.V1.Offers.SingleOfferLogs;
 namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Offers
 {
     public class SingleOfferLogs :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleOfferLogs>,
         ILimitable<SingleOfferLogs>,
         IOrderable<SingleOfferLogs>,

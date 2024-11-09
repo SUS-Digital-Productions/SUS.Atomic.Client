@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
 {
     public class SingleAccountCollection
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleAccountCollectionResponse>
     {
         internal SingleAccountCollection(string endpoint, string account, string collection)

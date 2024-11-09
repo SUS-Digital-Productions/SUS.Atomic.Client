@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Collections
 {
     public class SingleCollectionLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleCollectionLogs>,
         ILimitable<SingleCollectionLogs>,
         IOrderable<SingleCollectionLogs>,

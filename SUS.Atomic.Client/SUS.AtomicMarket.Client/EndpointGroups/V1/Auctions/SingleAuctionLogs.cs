@@ -6,7 +6,7 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Auctions
 {
     public class SingleAuctionLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IExecutable<SingleAuctionLogsResponse>
     {
         internal SingleAuctionLogs(string endpoint, long auctionId)

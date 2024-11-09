@@ -11,7 +11,7 @@ namespace SUS.Atomic.Base.Responses.Generic
         public string Name { get; set; }
 
         [JsonProperty("data")]
-        public object LogData { get; set; }
+        public dynamic Data { get; set; }
 
         [JsonProperty("txid")]
         public string TxId { get; set; }

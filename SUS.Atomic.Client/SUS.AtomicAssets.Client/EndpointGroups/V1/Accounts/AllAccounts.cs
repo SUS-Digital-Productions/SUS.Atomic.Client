@@ -5,7 +5,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Accounts
 {
     public class AllAccounts
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IOwnerMatchable<AllAccounts>,
         ICollectionFilterable<AllAccounts>,
         ISchemaFilterable<AllAccounts>,

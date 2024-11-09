@@ -6,7 +6,7 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
 {
     public class SingleTemplateLogs
         :
-        BaseEndpointGroup,
+        BaseEndpoint,
         IPageable<SingleTemplateLogs>,
         ILimitable<SingleTemplateLogs>,
         IOrderable<SingleTemplateLogs>,
