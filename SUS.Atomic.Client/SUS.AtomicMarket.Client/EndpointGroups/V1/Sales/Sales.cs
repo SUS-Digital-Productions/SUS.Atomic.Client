@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Sales
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Sales
 {
     public class Sales<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
         internal Sales(string endpoint)
         {
             _endpoint = endpoint;

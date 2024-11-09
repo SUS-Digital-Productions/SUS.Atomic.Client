@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Config
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Config
 {
     public class Configs
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
         internal Configs(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/config";

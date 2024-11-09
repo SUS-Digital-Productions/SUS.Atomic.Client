@@ -24,7 +24,7 @@ namespace SUS.Atomic.Base.Responses.Generic
         public List<string> NotifiedAccounts { get; set; }
 
         [JsonProperty("market_fee")]
-        public int MarketFee { get; set; }
+        public decimal MarketFee { get; set; }
 
         [JsonProperty("created_at_block")]
         public long CreatedAtBlock { get; set; }

@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Buyoffers
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Buyoffers
 {
     public class Buyoffers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
         internal Buyoffers(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/buyoffers";

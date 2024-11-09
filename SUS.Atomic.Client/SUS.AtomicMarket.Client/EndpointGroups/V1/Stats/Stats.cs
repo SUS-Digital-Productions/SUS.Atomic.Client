@@ -21,9 +21,34 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Stats
             return new AllSalesStats(_endpoint, symbol);
         }
 
-        public AllGraphStats GetGraphStats(string symbol) 
+        public AllGraphStats GetGraphStats(string symbol)
         {
-            return new AllGraphStats(_endpoint, symbol); 
+            return new AllGraphStats(_endpoint, symbol);
+        }
+
+        public AllAccountsStats GetAccountsStats(string symbol)
+        {
+            return new AllAccountsStats(_endpoint, symbol);
+        }
+
+        public SingleAccountStats GetAccountStats(string account, string symbol)
+        {
+            return new SingleAccountStats(_endpoint, account, symbol);
+        }
+
+        public AllCollectionsStats GetCollectionsStats(string symbol, string search)
+        {
+            return new AllCollectionsStats(_endpoint, symbol, search);
+        }
+
+        public SingleCollectionStats GetCollectionStats(string collection, string symbol)
+        {
+            return new SingleCollectionStats(_endpoint, collection, symbol);
+        }
+
+        public CollectionSchemaStats GetCollectionSchemaStats(string collection, string symbol)
+        {
+            return new CollectionSchemaStats(_endpoint, collection, symbol);
         }
     }
 }

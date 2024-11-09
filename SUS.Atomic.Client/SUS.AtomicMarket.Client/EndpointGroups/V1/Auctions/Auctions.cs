@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Auctions
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Auctions
 {
     public class Auctions<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
         internal Auctions(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/auctions";

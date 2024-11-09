@@ -1,8 +1,11 @@
-﻿namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Marketplaces
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Marketplaces
 {
     public class Marketplaces
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
 
         internal Marketplaces(string endpoint)
         {

@@ -1,13 +1,14 @@
-﻿using System;
+﻿using SUS.Atomic.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Offers
 {
     public class Offers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
-
         internal Offers(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/offers";

@@ -1,9 +1,11 @@
-﻿namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Assets
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Assets
 {
     public class Assets<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
-
         internal Assets(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/assets";

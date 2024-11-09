@@ -1,9 +1,11 @@
-﻿namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Transfers
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicMarket.Client.EndpointGroups.V1.Transfers
 {
     public class Transfers<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
-
         internal Transfers(string endpoint)
         {
             _endpoint = endpoint;

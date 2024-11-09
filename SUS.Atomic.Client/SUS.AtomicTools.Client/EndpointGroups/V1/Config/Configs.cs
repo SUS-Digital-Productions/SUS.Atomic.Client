@@ -1,12 +1,14 @@
-﻿using System;
+﻿using SUS.Atomic.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SUS.AtomicTools.Client.EndpointGroups.V1.Config
 {
     public class Configs
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
 
         internal Configs(string endpoint)
         {

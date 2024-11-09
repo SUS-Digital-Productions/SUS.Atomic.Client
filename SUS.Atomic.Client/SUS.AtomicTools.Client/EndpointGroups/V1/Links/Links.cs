@@ -1,9 +1,11 @@
-﻿namespace SUS.AtomicTools.Client.EndpointGroups.V1.Links
+﻿using SUS.Atomic.Base;
+
+namespace SUS.AtomicTools.Client.EndpointGroups.V1.Links
 {
     public class Links<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>
+        :
+        BaseEndpointGroup
     {
-        private readonly string _endpoint;
-
         internal Links(string endpoint)
         {
             _endpoint = $"{endpoint}/v1/links";

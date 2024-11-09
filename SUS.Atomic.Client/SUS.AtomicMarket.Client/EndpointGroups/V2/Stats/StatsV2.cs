@@ -11,9 +11,9 @@ namespace SUS.AtomicMarket.Client.EndpointGroups.V2.Stats
             _endpoint = $"{endpoint}/v2/stats";
         }
 
-        public StatsSchemaCollection GetSchemaCollectionStats(string collection, string symbol)
+        public CollectionSchemaStats GetSchemaCollectionStats(string collection, string symbol)
         {
-            return new StatsSchemaCollection(_endpoint, collection, symbol);
+            return new CollectionSchemaStats(_endpoint, collection, symbol);
         }
     }
 }

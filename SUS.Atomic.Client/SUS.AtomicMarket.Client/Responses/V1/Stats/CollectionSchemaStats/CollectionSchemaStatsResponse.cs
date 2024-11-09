@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using SUS.Atomic.Base.Responses.Generic;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace SUS.AtomicMarket.Client.Responses.V2.Stats.StatsSchemaCollection
+namespace SUS.AtomicMarket.Client.Responses.V1.Stats.CollectionSchemaStats
 {
-    public class StatsSchemaCollectionResponse
+    public class CollectionSchemaStatsResponse
     {
         [JsonProperty("success")]
         public bool Success { get; set; }
@@ -27,20 +29,13 @@ namespace SUS.AtomicMarket.Client.Responses.V2.Stats.StatsSchemaCollection
 
     public class Result
     {
-        [JsonProperty("schema")]
-        public ExtendedAtomicSchema Schema { get; set; }
-
         [JsonProperty("schema_name")]
         public string SchemaName { get; set; }
 
-        [JsonProperty("sales")]
-        public string Sales { get; set; }
+        [JsonProperty("listings")]
+        public string Listings { get; set; }
 
         [JsonProperty("volume")]
         public string Volume { get; set; }
-
-        [JsonProperty("assets")]
-        public int Assets { get; set; }
     }
-
 }
