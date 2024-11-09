@@ -1,16 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\SUS.Atomic.Base\SUS.Atomic.Base.csproj" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Version>0.1.0</Version>
+		<Authors>Pasha</Authors>
+		<Company>SUS Digital Productions</Company>
+		<Product>AtomicTools Client</Product>
+		<PackageTags>atomicassets, atomictools, atomicmarket</PackageTags>
+		<Nullable>enable</Nullable>
+		<Description>Open Source AtomicTools Package brought to you by SUS Digital Productions. Github repository link: https://github.com/SUS-Digital-Productions/SUS.Atomic.Client</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\SUS.Atomic.Base\SUS.Atomic.Base.csproj" />
+	</ItemGroup>
 
 </Project>
