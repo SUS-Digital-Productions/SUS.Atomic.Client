@@ -1,1 +1,1 @@
-# SUS.AtomicAssets.Client
+# SUS.Atomic.Client
