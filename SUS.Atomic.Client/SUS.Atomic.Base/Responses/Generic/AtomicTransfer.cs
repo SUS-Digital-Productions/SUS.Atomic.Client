@@ -17,6 +17,9 @@ namespace SUS.Atomic.Base.Responses.Generic
         [JsonProperty("recipient_name")]
         public string Recipient { get; set; }
 
+        [JsonProperty("txid")]
+        public string? TxId { get; set; }
+
         [JsonProperty("memo")]
         public string Memo { get; set; }
 

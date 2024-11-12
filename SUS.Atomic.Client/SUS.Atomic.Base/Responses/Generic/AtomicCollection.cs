@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SUS.Atomic.Base.Responses.Generic
 {
-    public abstract class AtomicCollection
+    public class AtomicCollection
     {
         [JsonProperty("collection_name")]
         public string CollectionName { get; set; }

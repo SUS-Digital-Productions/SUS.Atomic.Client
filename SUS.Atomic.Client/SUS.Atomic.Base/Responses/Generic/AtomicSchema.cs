@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SUS.Atomic.Base.Responses.Generic
 {
-    public abstract class AtomicSchema
+    public class AtomicSchema
     {
         [JsonProperty("schema_name")]
         public string SchemaName { get; set; }

@@ -1,7 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SUS.Atomic.Base.Responses.Generic
 {
@@ -22,8 +20,11 @@ namespace SUS.Atomic.Base.Responses.Generic
         [JsonProperty("memo")]
         public string Memo { get; set; }
 
+        [JsonProperty("txid")]
+        public string? TxId { get; set; }
+
         [JsonProperty("assets")]
-        public List<AtomicAsset<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>> Assets { get; set; }
+        public List<ExtendedAtomicAsset<TemplateImmutableData, AssetImmutableData, AssetMutableData, CombinedData>> Assets { get; set; }
 
         [JsonProperty("created_at_block")]
         public string CreatedAtBlock { get; set; }
