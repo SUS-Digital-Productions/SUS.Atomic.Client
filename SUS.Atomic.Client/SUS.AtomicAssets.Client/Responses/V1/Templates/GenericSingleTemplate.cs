@@ -8,7 +8,7 @@ namespace SUS.AtomicAssets.Client.Responses.V1.Templates
         [JsonProperty("contract")]
         public string Contract { get; set; }
 
-        [JsonProperty("scheme")]
+        [JsonProperty("schema")]
         public AtomicSchema Schema { get; set;}
 
         [JsonProperty("collection")]
