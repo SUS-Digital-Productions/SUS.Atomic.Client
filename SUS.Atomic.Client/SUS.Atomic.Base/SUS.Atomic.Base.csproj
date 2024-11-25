@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	  <TargetFramework>netstandard2.1</TargetFramework>
-	  <Version>0.1.6</Version>
+	  <Version>0.1.7</Version>
 	  <Authors>Pasha</Authors>
 	  <Company>SUS Digital Productions</Company>
 	  <Product>AtomicMarket Client</Product>
@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 

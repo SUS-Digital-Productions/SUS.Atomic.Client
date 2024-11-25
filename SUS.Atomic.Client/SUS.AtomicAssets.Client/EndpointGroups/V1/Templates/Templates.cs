@@ -25,5 +25,10 @@ namespace SUS.AtomicAssets.Client.EndpointGroups.V1.Templates
         {
             return new SingleTemplateLogs(_endpoint, collectionName, templateId);
         }
+
+        public SingleTemplateStats GetStats(string collectionName, long templateId)
+        {
+            return new SingleTemplateStats(_endpoint, collectionName, templateId);
+        }
     }
 }
