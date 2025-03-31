@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
-		<Version>0.1.7</Version>
+		<Version>0.1.8</Version>
 		<Authors>Pasha</Authors>
 		<Company>SUS Digital Productions</Company>
 		<Product>AtomicMarket Client</Product>
@@ -12,7 +12,7 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-	  <PackageReference Include="SUS.Atomic.Base" Version="0.1.7" />
+	  <PackageReference Include="SUS.Atomic.Base" Version="0.1.8" />
 	</ItemGroup>
 
 </Project>
